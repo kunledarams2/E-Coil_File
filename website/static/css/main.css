@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1050px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar {
+    width: 100%;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+    border-bottom: #e8491d 3px solid;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+
+.navbar .menu-items {
+    display: flex;
+}
+
+.navbar .nav-container li {
+    list-style: none;
+}
+
+.navbar .nav-container a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+}
+
+#active {
+    color: #e8491d;
+}
+
+.navbar .nav-container a:hover {
+    font-weight: bolder;
+    color: white;
+}
+
+.nav-container {
+    display: block;
+    position: relative;
+    height: 80px;
+}
+
+.nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+    padding-top: 120px;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    height: 100vh;
+    width: 100%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    background-color: gray;
+}
+
+.navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #0e2431;
+    font-size: 25px;
+    align-items: center;
+}
+
+h1 {
+    padding: 10px 0;
+}
+
+span {
+    color: #e8491d;
+}
+
+.nav-container input[type="checkbox"]:checked~.menu-items {
+    transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked~.logo {
+    display: none;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* section */
+
+p {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.text-wrap {
+    text-align: justify;
+}
+
+
+/* submit file */
+
+#txt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-text {
+    text-align: center;
+    font-size: 30px;
+}
+
+textarea {
+    display: flex;
+    justify-content: center;
+    resize: none;
+    padding: 10px 15px;
+    height: 20vh;
+    outline: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    color: black;
+    padding: 50px 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slt {
+    font-size: 16px;
+}
+
+#btn {
+    cursor: pointer;
+    background: #e8491d;
+    border: none;
+    padding: 10px 27px;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.btn1 {
+    background-color: gray;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn1 a:hover {
+    color: #e8491d;
+}
+
+.btn1 a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* contact file */
+
+.address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
