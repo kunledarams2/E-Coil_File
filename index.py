@@ -4,5 +4,5 @@ app = create_app()
 
 if __name__ == '__main__':
    
-    app.run(debug=True)  #turn this off in production
+    app.run(debug=True, host="0.0.0.0")  #turn this off in production
     
